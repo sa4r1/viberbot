@@ -83,12 +83,16 @@ else if($input['event'] == "subscribed")
 }
 else if($input['event'] == "conversation_started")
 {
-  sendMsgText($sender_id, "Беседа началась!");
+  sendMsgText($sender_id, "
+  	Бот лежит на сервисе heroku: cartridgestat.herokuapp.com \n
+  	Mail: helpit@sawmill25.ru \n
+  	Код лежит тут: github.com/sa4r1/viberbot \n
+  	MySQL: ostroucz.beget.tech ostroucz_base Kukuruza*25
+  	");
 }
 elseif($input['event'] == "message")
 {
   sendMsg($sender_id, $text, $type);
-  sendMsg($sender_id, $sender_name, $type);
 }
 
 ?>
