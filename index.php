@@ -1,3 +1,4 @@
+Запуск скрипта
 <?php 
 
 $auth_token = "AUTH_TOKEN";

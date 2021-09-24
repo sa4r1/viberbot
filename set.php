@@ -1,6 +1,7 @@
+Установка хука
 <?php
 	$auth_token = '4e01c7364b67e33a-b9f3db0adbf60360-590941c35d4d41a7';
-	$webhook = 'WEBHOOK_URL';
+	$webhook = 'https://cartridgestat.herokuapp.com';
 	
 	$jsonData = 
 	'{
