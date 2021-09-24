@@ -68,6 +68,7 @@ $text = $input['message']['text']; //actual message the user has sent
 $sender_id = $input['sender']['id']; //unique viber id of user who sent the message
 $sender_name = $input['sender']['name']; //name of the user who sent the message
 
+
 if($input['event'] == 'webhook') 
 {
   $webhook_response['status'] = 0;
@@ -87,6 +88,7 @@ else if($input['event'] == "conversation_started")
 elseif($input['event'] == "message")
 {
   sendMsg($sender_id, $text, $type);
+  sendMsg($sender_id, $sender_name, $type);
 }
 
 ?>
