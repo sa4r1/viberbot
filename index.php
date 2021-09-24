@@ -125,7 +125,7 @@ else if($input['event'] == "conversation_started")
 }
 elseif($input['event'] == "message")
 {
-	getMainMenu($sender_id);
+	getMainMenu();
   sendMsg($sender_id, $text, $type);
 }
 
