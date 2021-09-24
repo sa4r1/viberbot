@@ -34,109 +34,35 @@ function sendReq($data)
 	else {return $response;}
 }
 
-function getMainMenu($user_id){
-	$data['auth_token'] = $auth_token;
-	$data['receiver']=$user_id;
-  $data['BgColor']="#ffffff";
-  $data['type']='text';
-  $data['text']="Please select one of the options below:";
-  $keyboard_array['Type']='keyboard';
-  $keyboard_array['DefaultHeight']=false;
-  $keyboard_array['BgColor']="#FFFFFF";
-  $keyboard['keyboard']=$keyboard_array;
- 
-  $news['Columns']=2;
-  $news['Rows']=2;
-  $news['TextVAlign']="bottom";
-  $news['TextHAlign']="center";
-  $news['TextOpacity']="100";
-  $news['Text']='NEWS';
-  $news['TextSize']="regular";
-  $news['ActionType']="reply";
-  $news['ActionBody']="LCNews";
-  $keyboard['keyboard']['Buttons'][]=$news;
- 
- 
-  $articles['Columns']=2;
-  $articles['Rows']=2;
-  $articles['TextVAlign']="bottom";
-  $articles['TextHAlign']="center";
-  $articles['TextOpacity']="100";
-  $articles['Text']='ARTICLES';
-  $articles['TextSize']="regular";
-  $articles['ActionType']="reply";
-  $articles['ActionBody']="LCArticles";
-  $keyboard['keyboard']['Buttons'][]=$articles;
- 
- 
-  $interviews['Columns']=2;
-  $interviews['Rows']=2;
-  $interviews['TextVAlign']="bottom";
-  $interviews['TextHAlign']="center";
-  $interviews['TextOpacity']="100";
-  $interviews['Text']='INTERVIEWS';
-  $interviews['TextSize']="regular";
-  $interviews['ActionType']="reply";
-  $interviews['ActionBody']="LCInterviews";
-  $keyboard['keyboard']['Buttons'][]=$interviews;
- 
-  $gallery['Columns']=2;
-  $gallery['Rows']=2;
-  $gallery['TextVAlign']="bottom";
-  $gallery['TextHAlign']="center";
-  $gallery['TextOpacity']="100";
-  $gallery['Text']='GALLERY';
-  $gallery['TextSize']="regular";
-  $gallery['ActionType']="reply";
-  $gallery['ActionBody']="LCGallery";
-  $keyboard['keyboard']['Buttons'][]=$gallery; 
- 
-  $poll['Columns']=2;
-  $poll['Rows']=2;
-  $poll['TextVAlign']="bottom";
-  $poll['TextHAlign']="center";
-  $poll['TextOpacity']="100";
-  $poll['Text']='POLL';
-  $poll['TextSize']="regular";
-  $poll['ActionType']="reply";
-  $poll['ActionBody']="LCPoll";
-  $keyboard['keyboard']['Buttons'][]=$poll;
- 
-  $potm['Columns']=2;
-  $potm['Rows']=2;
-  $potm['TextVAlign']="bottom";
-  $potm['TextHAlign']="center";
-  $potm['TextOpacity']="100";
-  $potm['Text']='PLAYER OF THE MONTH';
-  $potm['TextSize']="regular";
-  $potm['ActionType']="reply";
-  $potm['ActionBody']="LCPOTM";
-  $keyboard['keyboard']['Buttons'][]=$potm;
- 
-  $quote['Columns']=2;
-  $quote['Rows']=2;
-  $quote['TextVAlign']="bottom";
-  $quote['TextHAlign']="center";
-  $quote['TextOpacity']="100";
-  $quote['Text']='QUOTE OF THE DAY';
-  $quote['TextSize']="regular";
-  $quote['ActionType']="reply";
-  $quote['ActionBody']="LCQuote";
-  $keyboard['keyboard']['Buttons'][]=$quote;
- 
-  $website['Columns']=4;
-  $website['Rows']=2;
-  $website['TextVAlign']="bottom";
-  $website['TextHAlign']="center";
-  $website['TextOpacity']="100";
-  $website['Text']='VISITE OUR WEBSITE';
-  $website['TextSize']="regular";
-  $website['ActionType']="open-url";
-  $website['ActionBody']="http://www.letzcricket.com";
-  $keyboard['keyboard']['Buttons'][]=$website;
- 
-  $data['keyboard']=$keyboard['keyboard'];
+function getMainMenu(){
 
+	$data = '{
+	"auth_token" = "4e067951a0e7e76b-51824f95c3576b71-27b793d898a081e5",
+	"Type": "keyboard",
+	"Buttons": [{
+		"Columns": 3,
+		"Rows": 2,
+		"Text": "<font color=\"#494E67\">Smoking</font><br><br>",
+		"TextSize": "medium",
+		"TextHAlign": "center",
+		"TextVAlign": "bottom",
+		"ActionType": "reply",
+		"ActionBody": "Smoking",
+		"BgColor": "#f7bb3f",
+		"Image": "https: //s12.postimg.org/ti4alty19/smoke.png"
+	}, {
+		"Columns": 3,
+		"Rows": 2,
+		"Text": "<font color=\"#494E67\">Non Smoking</font><br><br>",
+		"TextSize": "medium",
+		"TextHAlign": "center",
+		"TextVAlign": "bottom",
+		"ActionType": "reply",
+		"ActionBody": "Non smoking",
+		"BgColor": "# f6f7f9",
+		"Image": "https: //s14.postimg.org/us7t38az5/Nonsmoke.png"
+	}]
+}'
   return sendReq($data);
 }
 
