@@ -1,8 +1,8 @@
 Запуск скрипта
 <?php 
 
-$auth_token = "AUTH_TOKEN";
-$send_name = "HelloBot";
+$auth_token = "4e01c7364b67e33a-b9f3db0adbf60360-590941c35d4d41a7";
+$send_name = "Bot";
 $is_log = true;
 
 function put_log_in($data)
